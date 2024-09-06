@@ -28,12 +28,13 @@ public class JatTask10Date {
 		driver.findElement(By.xpath("//span[text()='Next']")).click();
 		driver.findElement(By.xpath("//a[text()='10']")).click();
 		Thread.sleep(2000);
-		WebElement datetex= driver.findElement(By.xpath("//input[@class='hasDatepicker']"));
+		WebElement datetex= driver.findElement(By.id("datepicker"));
 		//getText method is used to print the text of the WebElement
-		String text = datetex.getText();
+		//get value, attributetype, cssvalue, attribute name
+		String text = datetex.getAttribute("value");
 		System.out.println(text);
 		//close method is used to close the current window
-		driver.close();
+		//driver.close();
 		//quit method is used to close all associated window
 		driver.quit();
 
