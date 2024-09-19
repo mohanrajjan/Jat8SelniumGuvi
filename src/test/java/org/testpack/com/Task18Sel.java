@@ -22,14 +22,15 @@ public class Task18Sel {
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//input[@name='firstname']")).sendKeys("Test");
 		driver.findElement(By.xpath("//input[@name='lastname']")).sendKeys("User");
-		WebElement email = driver.findElement(By.xpath("//div[text()='Mobile number or email address']"));
-		/*
-		 * WebDriverWait wait = new WebDriverWait(driver, 60);
-		 * wait.until(ExpectedConditions.visibilityOfElementLocated(email));
-		 */
+		
+		
+		  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		  
+		  WebElement email = driver.findElement(By.xpath("//div[text()='Mobile number or email address']"));
+		  wait.until(ExpectedConditions.invisibilityOf(email));
 		email.sendKeys("testuser18@test.com");
-		Thread.sleep(2000);
 		WebElement pass = driver.findElement(By.xpath("//div[text()='New password']"));
+		wait.until(ExpectedConditions.visibilityOf(pass));
 		pass.sendKeys("Manhat@123");
 		WebElement day = driver.findElement(By.id("day"));
 		Select dy= new Select(day);

@@ -38,6 +38,6 @@ public class WindowClas {
 		driver.switchTo().window(parentWin);
 		String pageTitle = driver.getTitle();
 		System.out.println(pageTitle);
-		driver.close();
+		driver.quit();
 	}
 }

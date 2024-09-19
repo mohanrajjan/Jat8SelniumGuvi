@@ -34,6 +34,7 @@ public class SelectClass {
     	if(s1.isMultiple()) {
     		s1.selectByIndex(0);
     		s1.selectByVisibleText("Opel");
+    		s1.selectByValue("audi");
     	}
     	else{
     		s1.selectByValue("opel");

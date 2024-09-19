@@ -22,9 +22,9 @@ public static void main(String[] args) {
 	List<WebElement> Iframeelements = driver.findElements(By.tagName("iframe"));
 	int n = Iframeelements.size();
 	System.out.println("Number of frames on the page are "+n);
-	driver.switchTo().frame("a077aa5e");
+	driver.switchTo().frame(1);//a077aa5e
 	driver.findElement(By.xpath("//html/body/a/img")).click();
     //driver.close();
-    driver.quit();
+    //driver.quit();
 }
 }
