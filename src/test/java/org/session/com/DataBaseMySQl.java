@@ -29,6 +29,7 @@ public class DataBaseMySQl {
 		//Execute the query on stement
 		ResultSet rs=s.executeQuery("Select * from Credential");
 		//Goto next record as it points to the record before the first record
+	
 		rs.next();
 		
 		//Reading the values from result set - method - getString()
